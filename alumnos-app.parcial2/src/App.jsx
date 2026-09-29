@@ -27,6 +27,25 @@ function App() {
         </tbody>
       </table>
     </div>
+    <div>
+      <h3>Agregar Alumno</h3>
+        <form>
+          <label>
+            ID:
+            <input type="text" name="id" />
+          </label>
+          <label>
+            Nombre:
+            <input type="text" name="nombre" />
+          </label>
+          <label>
+            Curso:
+            <input type="text" name="curso" />
+          </label>
+          <input type="submit" value="Agregar" />
+        </form>
+    </div>
+
     </>
   )
 }
