@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { Search } from './components/search/search-index'
 
   const todosLosAlumnos = [
     { id: 1, nombre: "Juan", curso: "Programación" },
@@ -7,6 +8,9 @@ import './App.css'
     { id: 3, nombre: "Pedro", curso: "Cálculo" }
   ];
 
+  const busqueda = (e)=>{
+    setAlumnos(todosLosAlumnos.filter(a => a.nombre.toLowerCase().includes(e.target.value.toLowerCase())))
+  }
 
 function App() {
 
@@ -16,6 +20,7 @@ function App() {
     <>
       <div className="container">
       <h1>ALUMNOS "Parcial2 Arquitectura de Sistemas"</h1>
+      <Search onChange={busqueda}/>
       <table>
         <thead>
           <tr><th>ID</th><th>Nombre</th><th>Curso</th></tr>
